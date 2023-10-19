@@ -1,0 +1,32 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+$success: #a8ffbc; // This color code is typically used for `.bg-success` in Bootstrap
+$info: #9ef2ff; // This color code is typically used for `.bg-info` in Bootstrap
+
+.sidebar-col,
+.content-col {
+    padding: 30px;
+    height: 100vh;
+}
+
+.sidebar-col {
+    @extend .col-md-3;
+    background-color: $success; // Assuming $success is a bootstrap color variable for bg-success
+    text-align: center;
+}
+
+.content-col {
+    @extend .col-md-9;
+    background-color: $info; // Assuming $info is a bootstrap color variable for bg-info
+}

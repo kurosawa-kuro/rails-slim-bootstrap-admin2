@@ -1,0 +1,14 @@
+= form_with(model: @note) do |form|
+  - if @note.errors.any?
+    div style="color: red"
+      h2 = "#{pluralize(@note.errors.count, "error")} prohibited this note from being saved:"
+      ul
+        - @note.errors.each do |error|
+          li = error.full_message
+
+  div
+    = form.label :title, style: "display: block"
+    = form.text_field :title
+
+  div
+    = form.submit
